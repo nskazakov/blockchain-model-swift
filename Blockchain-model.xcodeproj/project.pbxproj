@@ -13,6 +13,9 @@
 		8F29B20C1FDE384600F54ADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F29B20A1FDE384600F54ADC /* Main.storyboard */; };
 		8F29B2181FDE384600F54ADC /* Blockchain_modelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29B2171FDE384600F54ADC /* Blockchain_modelTests.swift */; };
 		8F29B2231FDE384600F54ADC /* Blockchain_modelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29B2221FDE384600F54ADC /* Blockchain_modelUITests.swift */; };
+		8F29B23B1FDE4A0700F54ADC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29B2391FDE4A0700F54ADC /* MainView.swift */; };
+		8F29B23C1FDE4A0700F54ADC /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F29B23A1FDE4A0700F54ADC /* MainView.xib */; };
+		8F29B23F1FDE4C8D00F54ADC /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F29B23E1FDE4C8D00F54ADC /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		8F29B21E1FDE384600F54ADC /* Blockchain-modelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blockchain-modelUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F29B2221FDE384600F54ADC /* Blockchain_modelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain_modelUITests.swift; sourceTree = "<group>"; };
 		8F29B2241FDE384600F54ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F29B2391FDE4A0700F54ADC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = "Blockchain-model/Workflows/Counter/MainView.swift"; sourceTree = SOURCE_ROOT; };
+		8F29B23A1FDE4A0700F54ADC /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainView.xib; path = "Blockchain-model/Workflows/Counter/MainView.xib"; sourceTree = SOURCE_ROOT; };
+		8F29B23E1FDE4C8D00F54ADC /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,7 @@
 		8F29B2321FDE3C9C00F54ADC /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8F29B2401FDE566700F54ADC /* Models */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -174,6 +181,7 @@
 		8F29B2361FDE3D2900F54ADC /* Workflows */ = {
 			isa = PBXGroup;
 			children = (
+				8F29B23D1FDE4A0F00F54ADC /* Counter */,
 				8F29B2371FDE3D6E00F54ADC /* Main */,
 			);
 			path = Workflows;
@@ -186,6 +194,23 @@
 				8F29B20A1FDE384600F54ADC /* Main.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		8F29B23D1FDE4A0F00F54ADC /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				8F29B2391FDE4A0700F54ADC /* MainView.swift */,
+				8F29B23A1FDE4A0700F54ADC /* MainView.xib */,
+				8F29B23E1FDE4C8D00F54ADC /* MainCoordinator.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		8F29B2401FDE566700F54ADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F29B23C1FDE4A0700F54ADC /* MainView.xib in Resources */,
 				8F29B2091FDE384600F54ADC /* Assets.xcassets in Resources */,
 				8F29B20C1FDE384600F54ADC /* Main.storyboard in Resources */,
 			);
@@ -322,6 +348,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F29B2071FDE384600F54ADC /* ViewController.swift in Sources */,
+				8F29B23F1FDE4C8D00F54ADC /* MainCoordinator.swift in Sources */,
+				8F29B23B1FDE4A0700F54ADC /* MainView.swift in Sources */,
 				8F29B2051FDE384600F54ADC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,11 +507,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Blockchain-model/Blockchain_model.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Blockchain-model/Resources/Blockchain_model.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RW47C22KAD;
-				INFOPLIST_FILE = "Blockchain-model/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Blockchain-model/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nscorp.Blockchain-model";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -495,11 +523,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Blockchain-model/Blockchain_model.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Blockchain-model/Resources/Blockchain_model.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = RW47C22KAD;
-				INFOPLIST_FILE = "Blockchain-model/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Blockchain-model/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nscorp.Blockchain-model";
 				PRODUCT_NAME = "$(TARGET_NAME)";
